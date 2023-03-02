@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'dazzle';
+  src: url('fonts/dazzle-unicase-bold.woff2')
+    format('woff2');
+}
+#logo {
+  font-family: 'dazzle';
+  /* font-size: 14px; */
+}
+body {overflow-x: hidden;}
+/* #home-button:hover{
+  box-shadow: 5px 10px white;
+} */
+
+[data-theme="black"] .btn:hover {
+  box-shadow: 5px 5px white;
+}
+
+canvas{
+  width: 900%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
