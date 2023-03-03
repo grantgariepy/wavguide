@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	export let data;
+	export let data: PageData;
 
 	import { onMount } from 'svelte';
 	// from  https://codepen.io/tmrDevelops/pen/vOPZBv
@@ -84,9 +84,9 @@
 				<div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
 					{#if !data.user}
 						<a href="/register" class="btn btn-success text-white">Sign Up</a>
-						<a href="/" class="btn btn-info text-white">Sign In</a>
+						<a href="/login" class="btn btn-info text-white">Log In</a>
 					{:else}
-						<a href="/" class="btn btn-warning text-white">Sign Out</a>
+						<a href="/logout" class="btn btn-warning text-white">Sign Out</a>
 					{/if}
 				</div>
 			</div>
