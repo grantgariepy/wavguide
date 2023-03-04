@@ -12,7 +12,7 @@
 
 <div class="form-control w-full max-w-lg mb-2">
 	<label for={id} class="label font-medium pb-1">
-		<span class="label-text">{label}</span>
+		<span class="label-text text-white">{label}</span>
 	</label>
 	<input
 		class={type === 'file'

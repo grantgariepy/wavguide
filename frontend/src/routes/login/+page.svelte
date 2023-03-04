@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	import { enhance } from '$app/forms';
 	import { Input } from '../../lib/components/';
 	import toast from 'svelte-french-toast';
@@ -33,11 +32,11 @@
 </script>
 
 <div class="flex flex-col items-center h-full w-full">
-	<h2 class="mt-2 text-center text-3xl font-bold tracking-tight text-base-content">
+	<h2 class="mt-2 text-center text-3xl font-bold tracking-tight text-white">
 		Login to your account
 	</h2>
-	<p class="text-center mt-1">
-		Or <a href="/register" class="text-primary font-medium hover:cursor-pointer hover:underline"
+	<p class="text-center mt-1 text-white">
+		Or <a href="/register" class="text-white font-medium hover:cursor-pointer hover:underline"
 			>register</a
 		> if you don't already have an account.
 	</p>
