@@ -48,10 +48,10 @@
 		enctype="multipart/form-data"
 		use:enhance={submitUpdateProfile}
 	>
-		<h3 class="text-2xl font-medium">Update Profile</h3>
+		<h3 class="text-2xl text-white font-medium">Update Profile</h3>
 		<div class="form-control w-full max-w-lg">
 			<label for="avatar" class="label font-medium pb-1">
-				<span class="label-text">Profile Picture</span>
+				<span class="label-text text-white">Profile Picture</span>
 			</label>
 			<label for="avatar" class="avatar w-32 rounded-full hover:cursor-pointer">
 				<label for="avatar" class="absolute -bottom-0.5 -right-0.5 hover:cursor-pointer">

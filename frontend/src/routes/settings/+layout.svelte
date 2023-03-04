@@ -16,8 +16,8 @@
 	];
 </script>
 
-<div class="w-full h-full px-2">
-	<h3 class="text-2xl font-medium">Settings</h3>
+<div class="mx-auto max-w-7xl sm:px-6 h-full px-2">
+	<h3 class="text-2xl text-white font-medium py-2" id="logo">Settings</h3>
 	<div class="divider" />
 </div>
 <div class="flex mx-auto max-w-7xl sm:px-6 lg: px-8 h-full space-x-4">
