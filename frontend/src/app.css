@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'dazzle';
-  src: url('fonts/dazzle-unicase-bold.woff2')
+  src: url('/fonts/dazzle-unicase-bold.woff2')
     format('woff2');
 }
 #logo {

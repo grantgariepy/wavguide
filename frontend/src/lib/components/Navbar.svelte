@@ -40,7 +40,7 @@
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 			<ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 w-52">
 				<li><a href="/">Profile</a></li>
-				<li><a href="/">Settings</a></li>
+				<li><a href="/settings">Settings</a></li>
 			</ul>
 		</div>
 		<!-- <button class="btn btn-ghost">
