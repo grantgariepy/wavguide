@@ -55,7 +55,7 @@
 			</label>
 			<label for="avatar" class="avatar w-32 rounded-full hover:cursor-pointer">
 				<label for="avatar" class="absolute -bottom-0.5 -right-0.5 hover:cursor-pointer">
-					<span class="btn btn-circle btn-sm btn-error">
+					<span class="btn btn-circle btn-sm btn-info">
 						<Icon src={Pencil} class="w-4 h-4" />
 					</span>
 				</label>
@@ -97,7 +97,7 @@
 			errors={form?.errors?.name}
 		/>
 		<div class="w-full max-w-lg pt-3">
-			<button class="btn btn-primary w-full max-w-lg" type="submit" disabled={loading}>
+			<button class="btn btn-info w-full max-w-lg" type="submit" disabled={loading}>
 				Update Profile
 			</button>
 		</div>

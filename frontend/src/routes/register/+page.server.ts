@@ -1,9 +1,7 @@
 import { error, fail, redirect } from '@sveltejs/kit';
-import { registerUserSchema } from '../../lib/schemas';
-import { generateUsername, validateData } from '../../lib/utils';
-import type { Actions} from '@sveltejs/kit';
-
-
+import { registerUserSchema } from '$lib/schemas';
+import { generateUsername, validateData } from '$lib/utils';
+import type { Actions } from '@sveltejs/kit';
 
 export const actions = {
 	register: async ({ locals, request }) => {
@@ -28,4 +26,4 @@ export const actions = {
 
 		throw redirect(303, '/login');
 	}
-}satisfies Actions;
+} satisfies Actions;
