@@ -4,13 +4,13 @@ import { validateData } from '$lib/utils';
 import { serialize } from 'object-to-formdata';
 import type { ServerLoad, Actions } from '@sveltejs/kit';
 
-export const load = ({ locals }: { locals: any }) => {
+export const load: ServerLoad = ({ locals }) => {
 	if (!locals.pb?.authStore.isValid) {
 		throw redirect(303, '/login');
 	}
 };
 
-export const actions = {
+export const actions: Actions = {
 	updateProfile: async ({ request, locals }: { request: any; locals: any }) => {
 		const body = await request.formData();
 		const userAvatar = body.get('avatar');

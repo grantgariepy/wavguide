@@ -86,7 +86,9 @@
 						<a href="/register" class="btn btn-success text-white">Sign Up</a>
 						<a href="/login" class="btn btn-info text-white">Log In</a>
 					{:else}
-						<a href="/logout" class="btn btn-warning text-white">Sign Out</a>
+						<form action="/logout" method="POST">
+							<button class="btn btn-warning text-white">Sign Out</button>
+						</form>
 					{/if}
 				</div>
 			</div>

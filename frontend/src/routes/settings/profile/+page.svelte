@@ -61,7 +61,7 @@
 				</label>
 				<div class="w-32 rounded-full">
 					<img
-						src={data.user?.avatar
+						src={data.user.avatar
 							? getImageURL(data.user?.collectionId, data.user?.id, data.user?.avatar)
 							: `https://ui-avatars.com/api/?name=${data.user?.name}`}
 						alt="user avatar"
