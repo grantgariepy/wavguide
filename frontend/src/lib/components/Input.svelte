@@ -6,8 +6,7 @@
 	export let type = 'text';
 	export let disabled = false;
 	export let required = false;
-
-	export let errors: string;
+	export let errors: any;
 </script>
 
 <div class="form-control w-full max-w-lg mb-2">
