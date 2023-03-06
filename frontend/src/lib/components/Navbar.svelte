@@ -3,7 +3,7 @@
 		<a class="text-3xl" id="logo" href="/"> WAVGUIDE </a>
 	</div>
 	<div class="navbar-center">
-		<div class="form-control">
+		<div class="form-control hidden lg:flex min-w-max">
 			<div class="input-group">
 				<input
 					type="text"
@@ -29,7 +29,7 @@
 		</div>
 	</div>
 	<div class="navbar-end">
-		<button class="btn btn-ghost ">
+		<button class="btn btn-ghost lg:hidden">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				class="h-5 w-5"
