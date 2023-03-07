@@ -11,7 +11,6 @@ export const load: ServerLoad = async ({ params }) => {
 		// console.log(results.albums.items);
 		return results;
 	};
-	let promise = fetchSearchResults(searchTerm);
 	return {
 		results: fetchSearchResults(searchTerm)
 	};
