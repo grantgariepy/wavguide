@@ -18,20 +18,20 @@ const getAccessToken = async () => {
 			refresh_token: `${SPOTIFY_REFRESH_TOKEN}`
 		})
 	});
-	// console.log(response);
-	// console.log('client_id: ', SPOTIFY_CLIENT_ID, 'client_secret: ', SPOTIFY_CLIENT_SECRET);
-	// console.log('basic:', basic);
 	return response.json();
 };
 
-const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=long_term`;
-
-export const getTopTracks = async () => {
+export const getSearchResults = async () => {
+	const SEARCH_ENDPOINT = `https://api.spotify.com/v1/search?q=flume&type=album`;
 	const { access_token } = await getAccessToken();
 
-	return fetch(TOP_TRACKS_ENDPOINT, {
+	const options = {
+		method: 'GET',
 		headers: {
 			Authorization: `Bearer ${access_token}`
 		}
-	});
+	};
+	const response = await fetch(SEARCH_ENDPOINT, options);
+
+	return response;
 };
