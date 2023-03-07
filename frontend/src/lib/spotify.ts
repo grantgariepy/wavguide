@@ -21,8 +21,8 @@ const getAccessToken = async () => {
 	return response.json();
 };
 
-export const getSearchResults = async () => {
-	const SEARCH_ENDPOINT = `https://api.spotify.com/v1/search?q=flume&type=album`;
+export const getSearchResults = async (searchTerm: string | undefined) => {
+	const SEARCH_ENDPOINT = `https://api.spotify.com/v1/search?q=${searchTerm}&type=album`;
 	const { access_token } = await getAccessToken();
 
 	const options = {

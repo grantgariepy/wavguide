@@ -1,3 +1,7 @@
+<script lang="ts">
+	let searchTerm = '';
+</script>
+
 <div class="navbar bg-base-100">
 	<div class="navbar-start">
 		<a class="text-3xl" id="logo" href="/"> WAVGUIDE </a>
@@ -5,26 +9,29 @@
 	<div class="navbar-center">
 		<div class="form-control hidden lg:flex min-w-max">
 			<div class="input-group">
-				<input
-					type="text"
-					placeholder="Search…"
-					class="input input-bordered focus:outline-0 focus:border focus:border-info"
-				/>
-				<button class="btn btn-square">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="h-6 w-6"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						><path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-						/></svg
-					>
-				</button>
+				<form action={`/search/${searchTerm.split(' ').join('+')}`}>
+					<input
+						bind:value={searchTerm}
+						type="text"
+						placeholder="Search…"
+						class="input input-bordered focus:outline-0 focus:border focus:border-info"
+					/>
+					<button class="btn btn-square" type="submit">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							><path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+							/></svg
+						>
+					</button>
+				</form>
 			</div>
 		</div>
 	</div>
