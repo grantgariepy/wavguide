@@ -2,7 +2,7 @@
 	export let data: any;
 
 	const { items } = data.results.albums;
-	// console.log(items);
+
 	const albums = items.slice(0, 10).map((album: any) => ({
 		artist: album.artists.map((_artist: any) => _artist.name).join(', '),
 		songUrl: album.external_urls.spotify,

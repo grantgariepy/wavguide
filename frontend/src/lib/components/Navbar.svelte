@@ -1,5 +1,5 @@
 <script lang="ts">
-	let searchTerm = '';
+	let searchTerm: string = '';
 </script>
 
 <div class="navbar bg-base-100">
