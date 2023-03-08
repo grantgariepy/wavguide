@@ -1,9 +1,21 @@
 <script lang="ts">
-	export let data: any;
+	import type { PageData } from './$types';
+	import { onMount } from 'svelte';
 
-	const { items } = data.results.albums;
+	export let data: PageData;
 
-	const albums = items.slice(0, 10).map((album: any) => ({
+	// $: ({ results } = data);
+
+	// console.log(results);
+	// onMount(() => {
+	// 	console.log(data.results);
+	// });
+
+	let { items } = data.results.albums;
+
+	$: ({ items } = data.results.albums);
+
+	$: albums = items.slice(0, 10).map((album: any) => ({
 		artist: album.artists.map((_artist: any) => _artist.name).join(', '),
 		songUrl: album.external_urls.spotify,
 		title: album.name,
@@ -16,10 +28,13 @@
 		<p class="text-white font-bold text-xl" id="logo">Search Results</p>
 	</div>
 	<ul class="list-none">
+		<!-- {#each albums as album}
+			<p>{album.title}</p>
+		{/each} -->
 		{#each albums as album}
 			<li class="flex flex-row justify-between gap-4 p-4 hover:bg-secondary hover:cursor-pointer">
-				<img src={album.coverImage} alt="{album.title}-{album.artist}" />
-				<div class="flex items-center justify-center">
+				<img src={album.coverImage} alt="{album.title}-{album.artists}" />
+				<div class="flex albums-center justify-center">
 					<p class="text-2xl text-white ">
 						{album.title} - {album.artist}
 					</p>

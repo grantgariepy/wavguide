@@ -3,6 +3,7 @@ import { SPOTIFY_CLIENT_ID } from '$env/static/private';
 import { SPOTIFY_CLIENT_SECRET } from '$env/static/private';
 import { SPOTIFY_REFRESH_TOKEN } from '$env/static/private';
 import { SPOTIFY_ACCESS_TOKEN } from '$env/static/private';
+import { invalidate } from '$app/navigation';
 const basic = Buffer.from(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toString('base64');
 const TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
 
