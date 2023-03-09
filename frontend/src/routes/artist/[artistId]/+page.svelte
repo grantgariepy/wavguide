@@ -27,23 +27,25 @@
 
 <div class="mx-auto max-w-7xl sm:px-6 h-full px-2">
 	<div class="flex flex-row gap-7">
-		<img src={artist.images[1].url} alt="" class="w-80 h-80" />
-		<div class="flex py-4 ">
-			<div class="flex flex-col">
-				<div class="flex flex-row gap-4">
-					<p class="text-white font-bold text-3xl" id="logo">
-						{artist.name}
-					</p>
-					<p class="text-white">Followers: {artist.followers.total}</p>
-				</div>
+		<div class="flex flex-col ">
+			<div class="pt-3 sticky top-0">
+				<img src={artist.images[1].url} alt="" class="" />
+				<p class="text-white font-bold text-3xl" id="logo">
+					{artist.name}
+				</p>
+				<p class="text-white">Followers: {artist.followers.total}</p>
 				<p class="text-white">Genres</p>
-				<ul class="list-disc">
+				<ul class="list-disc pl-5">
 					{#each artist.genres as genre}
 						<li class="text-white">
 							{genre}
 						</li>
 					{/each}
 				</ul>
+			</div>
+		</div>
+		<div class="flex py-4 ">
+			<div class="flex flex-col">
 				<div class="grid grid-cols-4 gap-12">
 					{#each albums as album}
 						<div class="flex flex-col gap-2">
