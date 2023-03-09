@@ -1,26 +1,23 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { onMount } from 'svelte';
 
 	export let data: PageData;
-
-	// $: ({ results } = data);
-
-	// console.log(results);
-	// onMount(() => {
-	// 	console.log(data.results);
-	// });
-
+	// console.log(data.results.)
 	let { items } = data.results.albums;
 
 	$: ({ items } = data.results.albums);
+	console.log(items);
 
-	$: albums = items.slice(0, 10).map((album: any) => ({
+	$: albums = items.map((album: any) => ({
 		artist: album.artists.map((_artist: any) => _artist.name).join(', '),
 		songUrl: album.external_urls.spotify,
 		title: album.name,
-		coverImage: album.images[2].url
+		coverImage: album.images[2].url,
+		id: album.id,
+		totalTracks: album.total_tracks,
+		artistId: album.artists[0].id
 	}));
+	console.log(items.artists);
 </script>
 
 <div class="mx-auto max-w-7xl sm:px-6 h-full px-2">
@@ -32,13 +29,17 @@
 			<p>{album.title}</p>
 		{/each} -->
 		{#each albums as album}
-			<li class="flex flex-row justify-between gap-4 p-4 hover:bg-secondary hover:cursor-pointer">
+			<li class="flex flex-row justify-center gap-4 p-4 ">
 				<img src={album.coverImage} alt="{album.title}-{album.artists}" />
-				<div class="flex albums-center justify-center">
+				<div class="flex items-center justify-center">
 					<p class="text-2xl text-white ">
-						{album.title} - {album.artist}
+						{album.title} -
+						<a href={album.artistId} class="hover:text-info">
+							{album.artist}
+						</a>
 					</p>
 				</div>
+				<a href="/album/{album.id}" class="btn btn-success pull-right">Go to album</a>
 				<a href={album.songUrl} class="btn btn-info pull-right">Listen on Spotify</a>
 			</li>
 		{/each}

@@ -36,3 +36,18 @@ export const getSearchResults = async (searchTerm: string | undefined) => {
 
 	return response;
 };
+
+export const getAlbum = async (albumId: string | undefined) => {
+	const GET_ALBUM_ENDPOINT = `https://api.spotify.com/v1/albums/${albumId}/`;
+	const { access_token } = await getAccessToken();
+
+	const options = {
+		method: 'GET',
+		headers: {
+			Authorization: `Bearer ${access_token}`
+		}
+	};
+	const response = await fetch(GET_ALBUM_ENDPOINT, options);
+
+	return response;
+};

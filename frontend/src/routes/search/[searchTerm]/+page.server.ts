@@ -1,4 +1,3 @@
-import { invalidateAll } from '$app/navigation';
 import { getSearchResults } from '$lib/spotify';
 import type { ServerLoad } from '@sveltejs/kit';
 
