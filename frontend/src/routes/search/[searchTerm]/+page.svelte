@@ -34,7 +34,7 @@
 				<div class="flex items-center justify-center">
 					<p class="text-2xl text-white ">
 						{album.title} -
-						<a href={album.artistId} class="hover:text-info">
+						<a href="/artist/{album.artistId}" class="hover:text-info">
 							{album.artist}
 						</a>
 					</p>

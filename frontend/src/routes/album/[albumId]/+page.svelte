@@ -9,8 +9,8 @@
 
 	let items = data.results.tracks.items;
 
-	console.log(results);
-	console.log(items);
+	// console.log(results);
+	// console.log(items);
 </script>
 
 <div class="mx-auto max-w-7xl sm:px-6 h-full px-2">

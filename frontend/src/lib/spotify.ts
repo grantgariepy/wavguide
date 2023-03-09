@@ -51,3 +51,32 @@ export const getAlbum = async (albumId: string | undefined) => {
 
 	return response;
 };
+
+export const getArtist = async (artistId: string | undefined) => {
+	const GET_ARTIST_ENDPOINT = `https://api.spotify.com/v1/artists/${artistId}/`;
+	const { access_token } = await getAccessToken();
+
+	const options = {
+		method: 'GET',
+		headers: {
+			Authorization: `Bearer ${access_token}`
+		}
+	};
+	const results = await fetch(GET_ARTIST_ENDPOINT, options);
+
+	return results;
+};
+export const getArtistAlbums = async (artistId: string | undefined) => {
+	const GET_ARTIST_ALBUMS_ENDPOINT = `https://api.spotify.com/v1/artists/${artistId}/albums`;
+	const { access_token } = await getAccessToken();
+
+	const options = {
+		method: 'GET',
+		headers: {
+			Authorization: `Bearer ${access_token}`
+		}
+	};
+	const results = await fetch(GET_ARTIST_ALBUMS_ENDPOINT, options);
+
+	return results;
+};
