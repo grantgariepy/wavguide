@@ -10,7 +10,7 @@
 	let items = data.results.tracks.items;
 
 	// console.log(results);
-	// console.log(items);
+	console.log(items.artists);
 </script>
 
 <div class="mx-auto max-w-7xl sm:px-6 h-full px-2">
@@ -19,7 +19,10 @@
 		<div class="flex py-4 ">
 			<div class="flex flex-col">
 				<p class="text-white font-bold text-xl" id="logo">
-					{results.artists[0].name} - {results.name}
+					<a href="/artist/{results.artists[0].id}" class="hover:text-info">
+						{results.artists[0].name}
+					</a>
+					- {results.name}
 				</p>
 				<ol class="list-decimal">
 					{#each items as item}
