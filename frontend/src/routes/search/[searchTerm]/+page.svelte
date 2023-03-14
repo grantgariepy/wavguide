@@ -17,7 +17,7 @@
 		totalTracks: album.total_tracks,
 		artistId: album.artists[0].id
 	}));
-	console.log(items.artists);
+	// console.log(items.artists);
 </script>
 
 <div class="mx-auto max-w-7xl sm:px-6 h-full px-2">
@@ -30,11 +30,14 @@
 		{/each} -->
 		{#each albums as album}
 			<li class="flex flex-row justify-center gap-4 p-4 ">
-				<img src={album.coverImage} alt="{album.title}-{album.artists}" />
+				<img src={album.coverImage} alt="{album.title}-{album.artist}" />
 				<div class="flex items-center justify-center">
 					<p class="text-2xl text-white ">
 						{album.title} -
-						<a href="/artist/{album.artistId}" class="hover:text-info">
+						<a
+							href="/artist/{album.artist.toLowerCase().split(' ').join('-')}"
+							class="hover:text-info"
+						>
 							{album.artist}
 						</a>
 					</p>

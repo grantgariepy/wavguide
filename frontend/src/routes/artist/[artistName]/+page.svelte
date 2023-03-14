@@ -1,15 +1,15 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import type { PageData } from '../[artistName]/$types';
 
 	export let data: PageData;
 
 	// console.log(data.artist);
-	console.log(data.albums);
+	// console.log(data.albums);
 
 	let artist = data.artist;
 
 	let items = data.albums.items;
-	console.log(items);
+	// console.log(items);
 
 	$: albums = items.map((album: any) => ({
 		artist: album.artists.map((_artist: any) => _artist.name).join(', '),

@@ -37,6 +37,21 @@ export const getSearchResults = async (searchTerm: string | undefined) => {
 	return response;
 };
 
+export const getSearchArtists = async (artistName: string | undefined) => {
+	const SEARCH_ENDPOINT = `https://api.spotify.com/v1/search?q=${artistName}&type=artist`;
+	const { access_token } = await getAccessToken();
+
+	const options = {
+		method: 'GET',
+		headers: {
+			Authorization: `Bearer ${access_token}`
+		}
+	};
+	const response = await fetch(SEARCH_ENDPOINT, options);
+	// console.log(response);
+	return response;
+};
+
 export const getAlbum = async (albumId: string | undefined) => {
 	const GET_ALBUM_ENDPOINT = `https://api.spotify.com/v1/albums/${albumId}/`;
 	const { access_token } = await getAccessToken();
