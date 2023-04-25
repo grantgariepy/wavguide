@@ -11,7 +11,7 @@
 
 <div class="navbar bg-base-100">
 	<div class="navbar-start">
-		<a class="text-3xl" id="logo" href="/"> WAVGUIDE </a>
+		<a class="text-3xl logo" id="logo" href="/"> WAVGUIDE </a>
 	</div>
 	<div class="navbar-center">
 		<div class="form-control hidden lg:flex min-w-max">

@@ -1,6 +1,6 @@
 <footer class="footer items-center p-4 bg-neutral text-neutral-content">
 	<div class="items-center grid-flow-col">
-		<p class="text-3xl" id="logo">WAVGUIDE</p>
+		<p class="text-3xl logo" id="logo">WAVGUIDE</p>
 		<p>Copyright © 2023 - All right reserved</p>
 	</div>
 	<div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">

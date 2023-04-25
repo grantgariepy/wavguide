@@ -7,7 +7,7 @@
   src: url('/fonts/dazzle-unicase-bold.woff2')
     format('woff2');
 }
-#logo {
+.logo {
   font-family: 'dazzle';
   /* font-size: 14px; */
 }
