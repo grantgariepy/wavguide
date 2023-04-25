@@ -6,7 +6,7 @@
 	let { items } = data.results.albums;
 
 	$: ({ items } = data.results.albums);
-	console.log(items);
+	// console.log(items);
 
 	$: albums = items.map((album: any) => ({
 		artist: album.artists.map((_artist: any) => _artist.name).join(', '),

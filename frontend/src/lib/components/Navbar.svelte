@@ -1,5 +1,12 @@
 <script lang="ts">
 	let searchTerm: string = '';
+	export let data: any;
+	console.log(data);
+	if (data.user == undefined) {
+		console.log('not logged in');
+	} else {
+		console.log('logged in');
+	}
 </script>
 
 <div class="navbar bg-base-100">
@@ -71,7 +78,13 @@
 			</label>
 			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 			<ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 w-52">
-				<li><a href="/">Profile</a></li>
+				{#if data.user == undefined}
+					<!-- content here -->
+					<li><a href="/login">Profile</a></li>
+				{:else}
+					<!-- else content here -->
+					<li><a href={`/${data.user.username}`}>Profile</a></li>
+				{/if}
 				<li><a href="/settings">Settings</a></li>
 			</ul>
 		</div>
