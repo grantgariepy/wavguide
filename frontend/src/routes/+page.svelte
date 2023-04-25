@@ -21,17 +21,17 @@
 <!-- hero -->
 <div class="bg-black pb-6 sm:pb-8 lg:pb-24 pt-4 min-h-[200vh]">
 	<div class="max-w-screen px-4 md:px-8 mx-auto">
-		<section class="  flex flex-col items-center justify-center h-screen w-full">
+		<section class="flex flex-col items-center justify-center h-screen w-full">
 			<!-- image - start -->
 			<!-- <img src="/images/waveform.jpg" alt="" class="z-0 md:w-max md:h-max object-cover absolute" /> -->
 			<!-- image - end -->
 			<div
-				class="max-w-2xl md:text-[14rem] text-6xl w-full flex flex-col justify-center items-center"
+				class="z-10 bg-black md:fixed md:top-0 max-w-2xl lg:text-[14rem] text-6xl w-full h-min flex flex-col justify-center items-center"
 			>
-				<h1 id="logo4" class=" logo absolute top-96  text-blue-500 font-bold ">WAVGUIDE</h1>
-				<h1 id="logo2" class="logo absolute top-96 text-yellow-300 font-bold  ">WAVGUIDE</h1>
-				<h1 id="logo3" class="logo absolute top-96  text-red-500 font-bold ">WAVGUIDE</h1>
-				<h1 id="logo" class="logo absolute top-96 text-white font-bold ">WAVGUIDE</h1>
+				<h1 id="logo4" class=" logo absolute md:top-24  text-blue-500 font-bold ">WAVGUIDE</h1>
+				<h1 id="logo2" class="logo absolute md:top-24 text-yellow-300 font-bold  ">WAVGUIDE</h1>
+				<h1 id="logo3" class="logo absolute md:top-24  text-red-500 font-bold ">WAVGUIDE</h1>
+				<h1 id="logo" class="logo absolute md:top-24 text-white font-bold ">WAVGUIDE</h1>
 			</div>
 
 			<!-- overlay - start -->

@@ -9,9 +9,9 @@
 	}
 </script>
 
-<div class="navbar bg-base-100">
+<div class="navbar bg-base-100 fixed z-20">
 	<div class="navbar-start">
-		<a class="text-3xl logo" id="logo" href="/"> WAVGUIDE </a>
+		<a class="absolute left-4 text-3xl logo" id="nav-logo" href="/"> WAVGUIDE </a>
 	</div>
 	<div class="navbar-center">
 		<div class="form-control hidden lg:flex min-w-max">
@@ -110,3 +110,16 @@
 		</button> -->
 	</div>
 </div>
+
+<style>
+	#nav-logo2 {
+		transform: scale(1.05);
+		/* transform: translateY(20%); */
+	}
+	#nav-logo3 {
+		transform: scale(1.1);
+	}
+	#nav-logo4 {
+		transform: scale(1.15);
+	}
+</style>
