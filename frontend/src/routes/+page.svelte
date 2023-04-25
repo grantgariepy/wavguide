@@ -64,9 +64,7 @@
 			<!-- image - end -->
 
 			<!-- overlay - start -->
-			<!-- <div
-				class="mix-blend-multiply absolute inset-0 opacity-60"
-			/> -->
+			<div class="mix-blend-multiply absolute inset-0 opacity-60" />
 
 			<!-- overlay - end -->
 			<div class="absolute inset-0 h-max">
@@ -75,8 +73,9 @@
 			<!-- text start -->
 			<div class="sm:max-w-xl flex flex-col items-center relative p-4">
 				<h1
+					data-text-rep
 					id="logo"
-					class="pb-72 text-white text-4xl sm:text-5xl md:text-8xl font-bold text-center mb-8 md:mb-12"
+					class="content__title content__title--size-l pb-72 text-white text-4xl sm:text-5xl md:text-8xl font-bold text-center mb-8 md:mb-12"
 				>
 					WAVGUIDE
 				</h1>
