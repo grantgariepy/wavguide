@@ -31,12 +31,12 @@
 	};
 </script>
 
-<div class="flex flex-col items-center h-full w-full">
+<div class="flex flex-col justify-center items-center h-full w-full min-h-screen">
 	<h2 class="mt-2 text-center text-3xl font-bold tracking-tight text-white">
 		Login to your account
 	</h2>
 	<p class="text-center mt-1 text-white">
-		Or <a href="/register" class="text-white font-medium hover:cursor-pointer hover:underline"
+		Or <a href="/register" class="text-yellow-300 font-medium hover:cursor-pointer hover:underline"
 			>register</a
 		> if you don't already have an account.
 	</p>
@@ -71,7 +71,11 @@
 		</div>
 
 		<div class="w-full max-w-lg pt-2">
-			<button type="submit" class="btn btn-primary w-full" disabled={loading}>Login</button>
+			<button
+				type="submit"
+				class="btn bg-blue-500 text-white hover:bg-blue-700 w-full"
+				disabled={loading}>Login</button
+			>
 		</div>
 		{#if form?.notVerified}
 			<div class="alert alert-error shadow-lg w-full max-w-lg">

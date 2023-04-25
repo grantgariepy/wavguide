@@ -20,28 +20,20 @@
 
 <!-- hero -->
 <div class="bg-black pb-6 sm:pb-8 lg:pb-24 pt-4 min-h-[200vh]">
-	<div class="w-screen px-4 md:px-8 mx-auto ">
-		<section class=" overflow-hidden flex items-center justify-center h-screen">
+	<div class="max-w-screen px-4 md:px-8 mx-auto">
+		<section class="  flex flex-col items-center justify-center h-screen w-full">
 			<!-- image - start -->
 			<!-- <img src="/images/waveform.jpg" alt="" class="z-0 md:w-max md:h-max object-cover absolute" /> -->
 			<!-- image - end -->
-			<div class="flex items-center justify-center h-screen">
-				<h1 id="logo4" class=" logo absolute top-96  text-blue-500 font-bold text-center">
-					WAVGUIDE
-				</h1>
-				<h1 id="logo2" class="logo absolute top-96 text-yellow-300 font-bold text-center ">
-					WAVGUIDE
-				</h1>
-				<h1 id="logo3" class="logo absolute top-96  text-red-500 font-bold text-center ">
-					WAVGUIDE
-				</h1>
-				<h1
-					id="logo"
-					class="logo ring-purple-500 absolute top-96 text-white font-bold text-center "
-				>
-					WAVGUIDE
-				</h1>
+			<div
+				class="max-w-screen md:text-[14rem] text-6xl w-full flex flex-col justify-center items-center"
+			>
+				<h1 id="logo4" class=" logo absolute top-96  text-blue-500 font-bold ">WAVGUIDE</h1>
+				<h1 id="logo2" class="logo absolute top-96 text-yellow-300 font-bold  ">WAVGUIDE</h1>
+				<h1 id="logo3" class="logo absolute top-96  text-red-500 font-bold ">WAVGUIDE</h1>
+				<h1 id="logo" class="logo absolute top-96 text-white font-bold ">WAVGUIDE</h1>
 			</div>
+
 			<!-- overlay - start -->
 			<!-- <div class="mix-blend-multiply absolute inset-0 opacity-60" /> -->
 
@@ -50,15 +42,15 @@
 				<canvas id="canv" class="mix-blend-multiply" />
 			</div> -->
 			<!-- text start -->
-			<div class="sm:max-w-xl flex flex-col items-center p-4">
+			<div class="sm:max-w-xl flex flex-col items-center pt-24">
 				<div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
 					{#if !data.user}
-						<a href="/register" class="btn btn-success text-white">Sign Up</a>
-						<a href="/login" class="btn btn-info text-white">Log In</a>
+						<a href="/register" class="btn bg-yellow-300 hover:bg-yellow-500 text-white">Sign Up</a>
+						<a href="/login" class="btn bg-blue-500 hover:bg-blue-700 text-white">Log In</a>
 					{:else}
-						<!-- <form action="/logout" method="POST">
-							<button class="btn btn-warning text-white">Sign Out</button>
-						</form> -->
+						<form action="/logout" method="POST">
+							<button class="btn bg-red-500 hover:bg-red-700 text-white">Sign Out</button>
+						</form>
 					{/if}
 				</div>
 			</div>
@@ -69,8 +61,7 @@
 
 <style>
 	#logo {
-		font-size: 14rem;
-		animation: slide 1s linear infinite;
+		animation: slide 1s linear;
 		animation-play-state: paused;
 		animation-delay: calc(var(--scroll) * -1s);
 
@@ -78,8 +69,7 @@
 		animation-fill-mode: both;
 	}
 	#logo2 {
-		font-size: 14rem;
-		animation: slide2 1s linear infinite;
+		animation: slide2 1s linear;
 		animation-play-state: paused;
 		animation-delay: calc(var(--scroll) * -1s);
 
@@ -87,8 +77,7 @@
 		animation-fill-mode: both;
 	}
 	#logo3 {
-		font-size: 14rem;
-		animation: slide3 1s linear infinite;
+		animation: slide3 1s linear;
 		animation-play-state: paused;
 		animation-delay: calc(var(--scroll) * -1s);
 
@@ -96,8 +85,7 @@
 		animation-fill-mode: both;
 	}
 	#logo4 {
-		font-size: 14rem;
-		animation: slide4 1s linear infinite;
+		animation: slide4 1s linear;
 		animation-play-state: paused;
 		animation-delay: calc(var(--scroll) * -1s);
 
