@@ -9,7 +9,7 @@
 	}
 </script>
 
-<div class="navbar bg-base-100 fixed z-20">
+<div class="navbar bg-base-100  z-20">
 	<div class="navbar-start">
 		<a class="absolute left-4 text-3xl logo" id="nav-logo" href="/"> WAVGUIDE </a>
 	</div>

@@ -19,19 +19,20 @@
 </script>
 
 <!-- hero -->
-<div class="bg-black pb-6 sm:pb-8 lg:pb-24 pt-4 min-h-[200vh]">
+<div class="bg-black min-h-screen">
 	<div class="max-w-screen px-4 md:px-8 mx-auto">
-		<section class="flex flex-col items-center justify-center h-screen w-full">
+		<section class="flex flex-col items-center pt-24 h-screen w-full">
 			<!-- image - start -->
 			<!-- <img src="/images/waveform.jpg" alt="" class="z-0 md:w-max md:h-max object-cover absolute" /> -->
 			<!-- image - end -->
+
 			<div
-				class="z-10 bg-black md:fixed md:top-0 max-w-2xl lg:text-[14rem] text-6xl w-full h-min flex flex-col justify-center items-center"
+				class="z-10 bg-black sticky top-0 max-w-2xl lg:text-[14rem] text-6xl w-full  flex flex-col justify-center items-center"
 			>
-				<h1 id="logo4" class=" logo absolute md:top-24  text-blue-500 font-bold ">WAVGUIDE</h1>
-				<h1 id="logo2" class="logo absolute md:top-24 text-yellow-300 font-bold  ">WAVGUIDE</h1>
-				<h1 id="logo3" class="logo absolute md:top-24  text-red-500 font-bold ">WAVGUIDE</h1>
-				<h1 id="logo" class="logo absolute md:top-24 text-white font-bold ">WAVGUIDE</h1>
+				<h1 id="logo4" class=" logo absolute top-0  text-blue-500 font-bold ">WAVGUIDE</h1>
+				<h1 id="logo3" class="logo absolute top-0   text-red-500 font-bold ">WAVGUIDE</h1>
+				<h1 id="logo2" class="logo absolute top-0  text-yellow-300 font-bold  ">WAVGUIDE</h1>
+				<h1 id="logo" class="logo absolute top-0  text-white font-bold ">WAVGUIDE</h1>
 			</div>
 
 			<!-- overlay - start -->
@@ -42,7 +43,7 @@
 				<canvas id="canv" class="mix-blend-multiply" />
 			</div> -->
 			<!-- text start -->
-			<div class="sm:max-w-xl flex flex-col items-center pt-24">
+			<!-- <div class="sm:max-w-xl flex flex-col items-center ">
 				<div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
 					{#if !data.user}
 						<a href="/register" class="btn bg-yellow-300 hover:bg-yellow-500 text-white">Sign Up</a>
@@ -53,8 +54,11 @@
 						</form>
 					{/if}
 				</div>
-			</div>
+			</div> -->
 			<!-- text end -->
+		</section>
+		<section class="z-30 flex flex-col items-center pt-24 md:pt-96 h-screen w-full bg-black">
+			<div class="text-white z-30 bg-black">test</div>
 		</section>
 	</div>
 </div>
@@ -96,13 +100,13 @@
 	@keyframes slide2 {
 		to {
 			transform: translateY(-100%);
-			transform: scale(1.5);
+			transform: scale(1.25);
 		}
 	}
 	@keyframes slide3 {
 		to {
 			transform: translateY(-200%);
-			transform: scale(1.25);
+			transform: scale(1.5);
 		}
 	}
 	@keyframes slide4 {
@@ -114,17 +118,17 @@
 	@media only screen and (max-width: 600px) {
 		@keyframes slide2 {
 			to {
-				transform: translateY(200px);
+				transform: translateY(20px);
 			}
 		}
 		@keyframes slide3 {
 			to {
-				transform: translateY(400px);
+				transform: translateY(40px);
 			}
 		}
 		@keyframes slide4 {
 			to {
-				transform: translateY(600px);
+				transform: translateY(60px);
 			}
 		}
 	}

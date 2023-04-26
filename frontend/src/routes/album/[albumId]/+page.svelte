@@ -13,13 +13,16 @@
 	console.log(items.artists);
 </script>
 
-<div class="mx-auto max-w-7xl sm:px-6 h-full px-2">
+<div class="mx-auto max-w-7xl sm:px-6 h-full px-2 pt-20">
 	<div class="flex flex-row gap-7">
 		<img src={results.images[1].url} alt="" class="w-80 h-80" />
 		<div class="flex py-4 ">
 			<div class="flex flex-col">
 				<p class="text-white font-bold text-xl" id="logo">
-					<a href="/artist/{results.artists[0].id}" class="hover:text-info">
+					<a
+						href="/artist/{results.artists[0].name.toLowerCase().split(' ').join('-')}"
+						class="hover:text-info"
+					>
 						{results.artists[0].name}
 					</a>
 					- {results.name}
