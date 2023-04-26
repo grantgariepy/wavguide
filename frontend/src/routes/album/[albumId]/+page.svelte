@@ -10,7 +10,7 @@
 	let items = data.results.tracks.items;
 
 	// console.log(results);
-	console.log(items.artists);
+	// console.log(items.artists);
 </script>
 
 <div class="mx-auto max-w-7xl sm:px-6 h-full px-2 pt-20">
