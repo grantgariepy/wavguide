@@ -59,6 +59,7 @@
 			<h3 slot="heading">Change Your Email</h3>
 			<form action="?/updateEmail" method="POST" class="space-y-2" use:enhance={submitUpdateEmail}>
 				<Input
+					hidden={false}
 					id="email"
 					type="email"
 					label="Enter your new email address"
@@ -76,6 +77,7 @@
 		<h3 class="text-2xl font-medium text-white">Change Username</h3>
 		<div class="divider mb-0.5" />
 		<Input
+			hidden={false}
 			id="username"
 			label="Username"
 			value={data?.user?.username}
@@ -92,6 +94,7 @@
 				use:enhance={submitUpdateUsername}
 			>
 				<Input
+					hidden={false}
 					id="username"
 					type="text"
 					label="Enter your new username"
