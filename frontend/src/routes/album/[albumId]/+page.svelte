@@ -7,7 +7,7 @@
 	export let data: PageData;
 	export let form: any;
 
-	console.log(data.results);
+	// console.log(data.results);
 
 	let results = data.results;
 
@@ -36,11 +36,11 @@
 		};
 	};
 
-	console.log(results);
+	// console.log(results);
 	// console.log(items.artists);
 </script>
 
-<Modal label="change-email" checked={addReviewModalOpen}>
+<Modal label="add-review" checked={addReviewModalOpen}>
 	<span slot="trigger" class="btn btn-info">Write Review</span>
 	<h3 slot="heading">Write a Review</h3>
 	<form action="?/create" method="POST" class="space-y-2" use:enhance={submitAddReview}>
