@@ -36,7 +36,7 @@
 		};
 	};
 
-	// console.log(results);
+	console.log(results);
 	// console.log(items.artists);
 </script>
 
@@ -44,6 +44,26 @@
 	<span slot="trigger" class="btn btn-info">Write Review</span>
 	<h3 slot="heading">Write a Review</h3>
 	<form action="?/create" method="POST" class="space-y-2" use:enhance={submitAddReview}>
+		<Input
+			hidden={true}
+			id="albumId"
+			type="text"
+			label=""
+			required={true}
+			disabled={loading}
+			errors={form?.errors.albumId}
+			value={results.id}
+		/>
+		<Input
+			hidden={true}
+			id="artistId"
+			type="text"
+			label=""
+			required={true}
+			disabled={loading}
+			errors={form?.errors.artistId}
+			value={results.artists[0].id}
+		/>
 		<Input
 			hidden={true}
 			id="albumName"

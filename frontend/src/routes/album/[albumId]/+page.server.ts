@@ -1,5 +1,5 @@
 import { getAlbum } from '$lib/spotify';
-import { ServerLoad, fail, redirect, error } from '@sveltejs/kit';
+import { ServerLoad, redirect, error } from '@sveltejs/kit';
 
 export const load: ServerLoad = async ({ params }) => {
 	// if(!locals.pb?.authStore.isValid){
@@ -30,6 +30,5 @@ export const actions = {
 			console.log('Error:', err);
 			throw error(error.status, error.message);
 		}
-		throw redirect(303, '/');
 	}
 };
