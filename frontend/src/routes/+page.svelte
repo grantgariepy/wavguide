@@ -26,7 +26,7 @@
 		albumId: review.albumId,
 		albumName: review.albumName,
 		artistId: review.artistId,
-		dateCreated: review.created,
+		dateCreated: new Date(review.created),
 		reviewId: review.id,
 		reviewRating: review.rating,
 		reviewText: review.reviewText,
@@ -96,9 +96,15 @@
 								</a>
 
 								<div class="flex flex-col gap-2">
-									<span class="text-gray-400 text-sm">{review.dateCreated}</span>
+									<span class="text-gray-400 text-sm"
+										>{review.dateCreated.toLocaleDateString('en-US', {
+											year: 'numeric',
+											month: 'short',
+											day: '2-digit'
+										})}</span
+									>
 
-									<h2 class="text-gray-800 text-xl font-bold">
+									<h2 class="text-zinc-300 text-xl font-bold">
 										<a
 											href="/"
 											class="hover:text-indigo-500 active:text-indigo-600 transition duration-100"
