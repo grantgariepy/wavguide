@@ -9,7 +9,7 @@
 	// console.log(items);
 
 	$: albums = items.map((album: any) => ({
-		artist: album.artists.map((_artist: any) => _artist.name).join(', '),
+		artist: album.artists[0].name,
 		songUrl: album.external_urls.spotify,
 		title: album.name,
 		coverImage: album.images[2].url,

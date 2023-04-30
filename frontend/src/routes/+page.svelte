@@ -1,6 +1,6 @@
 <script lang="ts">
-	// import type { PageData } from './$types';
-	// export let data: PageData;
+	import type { PageData } from './$types';
+	export let data: PageData;
 	let searchTerm: string = '';
 	import { onMount } from 'svelte';
 	// from  https://codepen.io/tmrDevelops/pen/vOPZBv
@@ -16,6 +16,22 @@
 			false
 		);
 	});
+	let items = data.reviews;
+
+	console.log(items);
+
+	const reviews = items.map((review: any) => ({
+		albumArtist: review.albumArtist,
+		albumCover: review.albumCover,
+		albumId: review.albumId,
+		albumName: review.albumName,
+		artistId: review.artistId,
+		dateCreated: review.created,
+		reviewId: review.id,
+		reviewRating: review.rating,
+		reviewText: review.reviewText,
+		username: review.expand.user.username
+	}));
 </script>
 
 <!-- hero -->
@@ -51,59 +67,63 @@
 					WAVGUIDE
 				</h1>
 			</div>
-
-			<!-- overlay - start -->
-			<!-- <div class="mix-blend-multiply absolute inset-0 opacity-60" /> -->
-
-			<!-- overlay - end -->
-			<!-- <div class="absolute inset-0 h-max">
-				<canvas id="canv" class="mix-blend-multiply" />
-			</div> -->
-			<!-- text start -->
-			<!-- <div class="sm:max-w-xl flex flex-col items-center ">
-				<div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
-					{#if !data.user}
-						<a href="/register" class="btn bg-yellow-300 hover:bg-yellow-500 text-white">Sign Up</a>
-						<a href="/login" class="btn bg-blue-500 hover:bg-blue-700 text-white">Log In</a>
-					{:else}
-						<form action="/logout" method="POST">
-							<button class="btn bg-red-500 hover:bg-red-700 text-white">Sign Out</button>
-						</form>
-					{/if}
-				</div>
-			</div> -->
-			<!-- text end -->
-			<div class="sticky md:top-18 top-12">
-				<!-- <form action={`/search/${searchTerm.split(' ').join('+')}`}>
-					<div class="form-control md:pt-56 pt-12 md:top-18 top-12 w-96">
-						<div class=" flex flex-row gap-0">
-							<input
-								bind:value={searchTerm}
-								type="text"
-								class="w-full bg-white pl-2 text-base font-semibold outline-0 rounded-l-full"
-								placeholder="Search"
-								id=""
-							/>
-							<button
-								class="flex w-10 items-center justify-center  rounded-r-full border-r border-red-500 bg-red-500 p-5"
-							>
-								<svg
-									viewBox="0 0 20 20"
-									aria-hidden="true"
-									class="pointer-events-none absolute w-5 fill-white transition"
-								>
-									<path
-										d="M16.72 17.78a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM9 14.5A5.5 5.5 0 0 1 3.5 9H2a7 7 0 0 0 7 7v-1.5ZM3.5 9A5.5 5.5 0 0 1 9 3.5V2a7 7 0 0 0-7 7h1.5ZM9 3.5A5.5 5.5 0 0 1 14.5 9H16a7 7 0 0 0-7-7v1.5Zm3.89 10.45 3.83 3.83 1.06-1.06-3.83-3.83-1.06 1.06ZM14.5 9a5.48 5.48 0 0 1-1.61 3.89l1.06 1.06A6.98 6.98 0 0 0 16 9h-1.5Zm-1.61 3.89A5.48 5.48 0 0 1 9 14.5V16a6.98 6.98 0 0 0 4.95-2.05l-1.06-1.06Z"
-									/>
-								</svg>
-							</button>
-						</div>
-					</div>
-				</form> -->
-			</div>
 		</section>
 		<section class="flex flex-col items-center  h-screen w-full bg-black">
-			<div class="text-white bg-black">test</div>
+			<div class="bg-base py-6 sm:py-8 lg:py-12">
+				<div class="max-w-screen-xl px-4 md:px-8 mx-auto">
+					<!-- text - start -->
+					<div class="mb-10 md:mb-16">
+						<h2 class="text-zinc-100 text-2xl lg:text-3xl font-bold text-center mb-2 md:mb-4">
+							Recent Reviews
+						</h2>
+					</div>
+					<!-- text - end -->
+
+					<div class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16">
+						<!-- article - start -->
+						{#each reviews as review}
+							<div class="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
+								<a
+									href="/"
+									class="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
+								>
+									<img
+										src={review.albumCover}
+										loading="lazy"
+										alt="by Minh Pham"
+										class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200"
+									/>
+								</a>
+
+								<div class="flex flex-col gap-2">
+									<span class="text-gray-400 text-sm">{review.dateCreated}</span>
+
+									<h2 class="text-gray-800 text-xl font-bold">
+										<a
+											href="/"
+											class="hover:text-indigo-500 active:text-indigo-600 transition duration-100"
+											>{review.albumName} - {review.albumArtist}</a
+										>
+									</h2>
+
+									<p class="text-gray-500">
+										{review.reviewText}
+									</p>
+
+									<div>
+										<a
+											href="/"
+											class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 font-semibold transition duration-100"
+											>Read full review</a
+										>
+									</div>
+								</div>
+							</div>
+							<!-- article - end -->
+						{/each}
+					</div>
+				</div>
+			</div>
 		</section>
 	</div>
 </div>

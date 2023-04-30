@@ -92,7 +92,7 @@
 			required={true}
 			disabled={loading}
 			errors={form?.errors.albumCover}
-			value={results.images[2].url}
+			value={results.images[0].url}
 		/>
 		<Input
 			hidden={true}
