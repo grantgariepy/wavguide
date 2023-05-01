@@ -85,7 +85,7 @@
 							<div class="flex flex-col md:flex-row items-center gap-4 lg:gap-6">
 								<a
 									href="/"
-									class="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden rounded-lg shadow-lg relative"
+									class="group w-full md:w-24 lg:w-40 h-56 md:h-24 lg:h-40 block self-start shrink-0 bg-gray-100 overflow-hidden  shadow-lg relative"
 								>
 									<img
 										src={review.albumCover}
