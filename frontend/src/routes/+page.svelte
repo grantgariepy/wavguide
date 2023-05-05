@@ -18,7 +18,7 @@
 	});
 	let items = data.reviews;
 
-	console.log(items);
+	// console.log(items);
 
 	const reviews = items.map((review: any) => ({
 		albumArtist: review.albumArtist,

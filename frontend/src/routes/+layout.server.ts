@@ -15,7 +15,6 @@ export const load = ({ locals }: { locals: any }) => {
 			reviews: getRecentReviews()
 		};
 	}
-
 	return {
 		user: undefined,
 		reviews: getRecentReviews()

@@ -3,7 +3,7 @@ import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params, locals }) => {
 	const userName = params.userName;
-	const getUserId: object | null | undefined = await locals.pb
+	const getUserId = await locals.pb
 		?.collection('users')
 		.getFirstListItem(`username="${userName}"`, {});
 	// console.log(getUserId?.id);
