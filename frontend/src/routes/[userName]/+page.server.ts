@@ -12,5 +12,5 @@ export const load = (async ({ params, locals }) => {
 	const serializeNonPOJOs = (value: object | null | undefined) => {
 		return structuredClone(value);
 	};
-	return { results: serializeNonPOJOs(record) };
+	return { results: serializeNonPOJOs(record), params: userName };
 }) satisfies PageServerLoad;
