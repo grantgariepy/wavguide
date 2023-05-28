@@ -1,4 +1,4 @@
-<footer class="footer items-center p-4 bg-neutral text-neutral-content">
+<footer class="footer items-center p-4 bg-black text-neutral-content">
 	<div class="items-center grid-flow-col">
 		<p class="text-3xl logo" id="logo">WAVGUIDE</p>
 		<p>Copyright © 2023 - All right reserved</p>
@@ -45,32 +45,32 @@
 <div class="mt-spacing-7 pb-7 bg-inverse" aria-hidden="true">
 	<div style="margin-top:-23px">
 		<!--[-->
-		<div class="bg-primary" style="margin-top:0px;height:23px" />
-		<div class="bg-primary" style="margin-top:1px;height:22px" />
-		<div class="bg-primary" style="margin-top:2px;height:21px" />
-		<div class="bg-primary" style="margin-top:3px;height:20px" />
-		<div class="bg-primary" style="margin-top:4px;height:19px" />
-		<div class="bg-primary" style="margin-top:5px;height:18px" />
-		<div class="bg-primary" style="margin-top:6px;height:17px" />
-		<div class="bg-primary" style="margin-top:7px;height:16px" />
-		<div class="bg-primary" style="margin-top:8px;height:15px" />
-		<div class="bg-primary" style="margin-top:9px;height:14px" />
-		<div class="bg-primary" style="margin-top:10px;height:13px" />
-		<div class="bg-primary" style="margin-top:11px;height:12px" />
-		<div class="bg-primary" style="margin-top:12px;height:11px" />
-		<div class="bg-primary" style="margin-top:13px;height:10px" />
-		<div class="bg-primary" style="margin-top:14px;height:9px" />
-		<div class="bg-primary" style="margin-top:15px;height:8px" />
-		<div class="bg-primary" style="margin-top:16px;height:7px" />
-		<div class="bg-primary" style="margin-top:17px;height:6px" />
-		<div class="bg-primary" style="margin-top:18px;height:5px" />
-		<div class="bg-primary" style="margin-top:19px;height:4px" />
-		<div class="bg-primary" style="margin-top:20px;height:3px" />
-		<div class="bg-primary" style="margin-top:21px;height:2px" />
-		<div class="bg-primary" style="margin-top:22px;height:1px" />
-		<div class="bg-primary" style="margin-top:23px;height:0px" />
-		<div class="bg-primary" style="margin-top:24px;height:0px" />
-		<div class="bg-primary" style="margin-top:100px;height:0px" />
+		<div class="bg-black" style="margin-top:0px;height:23px" />
+		<div class="bg-black" style="margin-top:1px;height:22px" />
+		<div class="bg-black" style="margin-top:2px;height:21px" />
+		<div class="bg-black" style="margin-top:3px;height:20px" />
+		<div class="bg-black" style="margin-top:4px;height:19px" />
+		<div class="bg-black" style="margin-top:5px;height:18px" />
+		<div class="bg-black" style="margin-top:6px;height:17px" />
+		<div class="bg-black" style="margin-top:7px;height:16px" />
+		<div class="bg-black" style="margin-top:8px;height:15px" />
+		<div class="bg-black" style="margin-top:9px;height:14px" />
+		<div class="bg-black" style="margin-top:10px;height:13px" />
+		<div class="bg-black" style="margin-top:11px;height:12px" />
+		<div class="bg-black" style="margin-top:12px;height:11px" />
+		<div class="bg-black" style="margin-top:13px;height:10px" />
+		<div class="bg-black" style="margin-top:14px;height:9px" />
+		<div class="bg-black" style="margin-top:15px;height:8px" />
+		<div class="bg-black" style="margin-top:16px;height:7px" />
+		<div class="bg-black" style="margin-top:17px;height:6px" />
+		<div class="bg-black" style="margin-top:18px;height:5px" />
+		<div class="bg-black" style="margin-top:19px;height:4px" />
+		<div class="bg-black" style="margin-top:20px;height:3px" />
+		<div class="bg-black" style="margin-top:21px;height:2px" />
+		<div class="bg-black" style="margin-top:22px;height:1px" />
+		<div class="bg-black" style="margin-top:23px;height:0px" />
+		<div class="bg-black" style="margin-top:24px;height:0px" />
+		<div class="bg-black" style="margin-top:100px;height:0px" />
 		<!--]-->
 	</div>
 </div>

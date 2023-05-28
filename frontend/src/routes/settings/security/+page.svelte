@@ -12,6 +12,7 @@
 			<h3 class="text-2xl font-medium text-white">Change Password</h3>
 			<div class="divider" />
 			<Input
+				hidden={false}
 				id="oldPassword"
 				label="Old Password"
 				type="password"
@@ -19,6 +20,7 @@
 				errors={form?.errors?.oldPassword}
 			/>
 			<Input
+				hidden={false}
 				id="password"
 				label="New Password"
 				type="password"
@@ -26,6 +28,7 @@
 				errors={form?.errors?.password}
 			/>
 			<Input
+				hidden={false}
 				id="passwordConfirm"
 				label="Confirm New Password"
 				type="password"
